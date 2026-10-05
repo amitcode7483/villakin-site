@@ -65,11 +65,32 @@
     footer { border-top: 1px solid var(--border); padding: 26px 0 40px; font-size: 14px; color: var(--muted); }
     footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
+
+    section.video { padding: 64px 0 8px; }
+    section.video h2, section.flyers h2 { font-size: 32px; margin-bottom: 8px; }
+    section.video p.sub, section.flyers p.sub { color: var(--muted); margin: 0 0 22px; }
+    .player { border-radius: 22px; overflow: hidden; background: var(--ink); box-shadow: 0 30px 60px -34px rgba(31,79,69,.55); aspect-ratio: 16 / 9; }
+    .player video { width: 100%; height: 100%; display: block; }
+    .share-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 999px; padding: 9px 18px; font-weight: 700; font-size: 15px; }
+    .pill:hover { background: var(--primary-soft); color: var(--primary-dark); }
+    .pill.solid { background: var(--primary); color: #fff; }
+    .pill.solid:hover { background: var(--primary-dark); color: #fff; }
+    section.flyers { padding: 64px 0; }
+    .flyer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .flyer { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 18px; display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; }
+    .flyer img { width: 150px; aspect-ratio: 210 / 297; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--border); background: var(--soft); }
+    .flyer h3 { font-size: 21px; margin-bottom: 4px; }
+    .flyer p { margin: 0 0 14px; color: var(--muted); font-size: 15.5px; }
+
     @media (max-width: 820px) {
       .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 16px; }
       .grid { grid-template-columns: 1fr; }
       section.privacy { grid-template-columns: 1fr; gap: 20px; }
       .contact { padding: 26px; }
+      .flyer-grid { grid-template-columns: 1fr; }
+      .flyer { grid-template-columns: 110px 1fr; }
+      .flyer img { width: 110px; }
     }
   </style>
 </head>
@@ -93,9 +114,9 @@
       <div>
         <h1>Your family's own little village</h1>
         <p class="lead">Plan playdates and school holidays with families you trust, share care days, find classes, and help your kids build real friendships.</p>
-        <div class="badges" aria-label="Coming to iPhone and Android">
-          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.5-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg><span><small>Coming soon to</small>iPhone</span></span>
-          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 9.4l1.6-2.8a.4.4 0 0 0-.7-.4l-1.7 2.9a10 10 0 0 0-9.4 0L5.6 6.2a.4.4 0 1 0-.7.4l1.6 2.8A9 9 0 0 0 2 16.5h20a9 9 0 0 0-4.5-7.1zM7.5 13.7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg><span><small>Coming soon to</small>Android</span></span>
+        <div class="badges" aria-label="Available on iPhone and Android">
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.5-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg><span><small>Available on</small>iPhone</span></span>
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 9.4l1.6-2.8a.4.4 0 0 0-.7-.4l-1.7 2.9a10 10 0 0 0-9.4 0L5.6 6.2a.4.4 0 1 0-.7.4l1.6 2.8A9 9 0 0 0 2 16.5h20a9 9 0 0 0-4.5-7.1zM7.5 13.7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg><span><small>Available on</small>Android</span></span>
         </div>
         <p class="soon">Made in Australia, for Australian families.</p>
       </div>
@@ -111,6 +132,23 @@
         <div class="btn primary">Create a family account</div>
         <div class="btn ghost">I already have an account</div>
       </div>
+    </div>
+
+
+    <div class="wrap">
+      <section class="video" id="video">
+        <h2>See Villakin in 45 seconds</h2>
+        <p class="sub">A quick look at playdates, holidays, classes and teen trips. Feel free to share it with your class or street group.</p>
+        <div class="player">
+          <video controls playsinline preload="none" poster="media/villakin-ad-poster.jpg">
+            <source src="media/villakin-ad.mp4" type="video/mp4" />
+            Your browser can't play this video. <a href="media/villakin-ad.mp4">Download it instead</a>.
+          </video>
+        </div>
+        <div class="share-row">
+          <a class="pill" href="media/villakin-ad.mp4" download>Download the video (5 MB)</a>
+        </div>
+      </section>
     </div>
 
     <section class="features">
@@ -137,6 +175,29 @@
           <li>Your data is stored in Australia. No ads, and we never sell your information.</li>
           <li>Delete your family's account and data at any time, right in the app.</li>
         </ul>
+      </section>
+
+      <section class="flyers" id="flyers">
+        <h2>Flyers to print and share</h2>
+        <p class="sub">For school newsletters, noticeboards and parent groups. A4, print double-sided.</p>
+        <div class="flyer-grid">
+          <div class="flyer">
+            <img src="media/flyer-2-page.jpg" alt="Front page of the 2-page Villakin flyer" loading="lazy" />
+            <div>
+              <h3>2-page handout</h3>
+              <p>The quick version: what Villakin is, how it works in four steps, and how to get in touch.</p>
+              <a class="pill solid" href="media/Villakin-Flyer-2-page.pdf" download>Download PDF (0.9 MB)</a>
+            </div>
+          </div>
+          <div class="flyer">
+            <img src="media/flyer-4-page.jpg" alt="A page from the 4-page Villakin flyer showing pickup, trip map and SOS" loading="lazy" />
+            <div>
+              <h3>4-page flyer</h3>
+              <p>The full tour: how it works, pickup and teen trips, holidays, classes and every kid.</p>
+              <a class="pill solid" href="media/Villakin-Flyer-4-page.pdf" download>Download PDF (1.9 MB)</a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="contact">
