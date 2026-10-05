@@ -14,7 +14,7 @@
       --ground: #fbf7f1; --surface: #ffffff; --soft: #f3eee6; --border: #e7dfd3;
       --ink: #1f2a2e; --muted: #5b6366; --primary: #2f6f62; --primary-dark: #1f4f45;
       --primary-soft: #e3eeea; --warm: #e8956f; --warm-soft: #f8e3d6; --warm-ink: #7a3314;
-      --section: 104px; --gutter: 24px;
+      --section: 88px; --gutter: 24px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 80px; }
@@ -50,7 +50,7 @@
     .head.center { margin-left: auto; margin-right: auto; text-align: center; }
 
     /* Hero */
-    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; padding-top: 48px; padding-bottom: 88px; }
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; padding-top: 40px; padding-bottom: 72px; }
     .hero h1 { font-size: clamp(42px, 6vw, 64px); line-height: 1.04; }
     .hero p.lead { font-size: 20px; color: var(--muted); margin: 22px 0 30px; max-width: 32em; }
     .badges { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -86,7 +86,11 @@
 
     /* Features */
     .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; }
+    section.features-band { background: linear-gradient(180deg, var(--ground) 0%, var(--warm-soft) 160%); }
+    .card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; box-shadow: 0 14px 30px -24px rgba(31,79,69,.45); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--primary); }
+    .card:nth-child(even)::before { background: var(--warm); }
+    .card:hover { transform: translateY(-4px); border-color: #d9cfc0; box-shadow: 0 22px 40px -26px rgba(31,79,69,.55); }
     .card h3 { font-size: 21px; margin: 16px 0 8px; }
     .card p { color: var(--muted); font-size: 16px; }
     .num { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary-dark); font-weight: 700; }
@@ -118,9 +122,9 @@
     footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
 
     @media (max-width: 900px) {
-      :root { --section: 72px; --gutter: 20px; }
+      :root { --section: 52px; --gutter: 20px; }
       nav.links a:not(.cta) { display: none; }
-      .hero { grid-template-columns: 1fr; gap: 48px; padding-top: 24px; padding-bottom: 72px; }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 16px; padding-bottom: 48px; }
       .grid3 { grid-template-columns: 1fr; gap: 14px; }
       .privacy-grid { grid-template-columns: 1fr; gap: 14px; }
       .tile, .tile:nth-child(4), .tile:nth-child(5) { grid-column: auto; }
@@ -128,7 +132,13 @@
       .flyer { grid-template-columns: 110px 1fr; gap: 18px; padding: 18px; }
       .flyer img { width: 110px; }
       .contact { grid-template-columns: 1fr; padding: 32px 26px; }
-      .head { margin-bottom: 32px; }
+      .head { margin-bottom: 24px; }
+      .head p { font-size: 17px; margin-top: 10px; }
+      .card { padding: 20px 20px 22px; display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; align-items: center; }
+      .card h3 { margin: 0; font-size: 20px; }
+      .card p { grid-column: 1 / -1; margin-top: 12px; }
+      .tile { padding: 22px; }
+      .under-video { margin-top: 18px; }
     }
     @media (min-width: 901px) and (max-width: 1080px) {
       .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -199,7 +209,7 @@
       </div>
     </section>
 
-    <section id="features">
+    <section class="features-band" id="features">
       <div class="wrap">
         <div class="head">
           <span class="kicker">How it works</span>
