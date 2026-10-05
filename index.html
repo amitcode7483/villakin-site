@@ -87,7 +87,7 @@
     .under-video { text-align: center; margin-top: 24px; }
 
     /* Buttons */
-    .pill { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 15px; }
+    .pill { white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border: 1.5px solid var(--primary); color: var(--primary); border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 15px; }
     .pill:hover { background: var(--primary-soft); color: var(--primary-dark); }
     .pill.solid { background: var(--primary); color: #fff; }
     .pill.solid:hover { background: var(--primary-dark); color: #fff; }
@@ -153,8 +153,12 @@
       .privacy-grid { grid-template-columns: 1fr; gap: 14px; }
       .tile, .tile:nth-child(4), .tile:nth-child(5) { grid-column: auto; }
       .flyer-grid { grid-template-columns: 1fr; }
-      .flyer { grid-template-columns: 110px 1fr; gap: 18px; padding: 18px; }
-      .flyer img { width: 110px; }
+      .flyer { grid-template-columns: 92px 1fr; column-gap: 16px; row-gap: 0; padding: 16px; align-items: start; }
+      .flyer > div { display: contents; }
+      .flyer img { width: 92px; grid-row: 1 / span 2; }
+      .flyer h3 { font-size: 20px; margin: 2px 0 6px; }
+      .flyer p { font-size: 15px; line-height: 1.5; margin-bottom: 0; }
+      .flyer .pill { grid-column: 1 / -1; justify-content: center; margin-top: 16px; }
       .contact { grid-template-columns: 1fr; padding: 32px 26px; }
       .head { margin-bottom: 24px; }
       .village { aspect-ratio: 4 / 3; border-radius: 22px; margin-bottom: 18px; }
