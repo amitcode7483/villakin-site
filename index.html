@@ -128,6 +128,18 @@
     .num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary-dark); font-weight: 700; }
     .card:nth-child(even) .num { background: var(--warm-soft); color: var(--warm-ink); }
 
+    /* Four circles */
+    .circles4 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; }
+    .circles4 .art { max-width: 500px; width: 100%; justify-self: center; }
+    .circles4 .art img { width: 100%; height: auto; display: block; }
+    .c4-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .c4-list li { display: grid; grid-template-columns: 46px 1fr; gap: 16px; align-items: start; background: var(--ground); border: 1px solid var(--border); border-radius: 18px; padding: 18px 20px; }
+    .c4-list .dot { width: 46px; height: 46px; border-radius: 50%; border: 5px solid var(--c); background: color-mix(in srgb, var(--c) 16%, transparent); }
+    .c4-list h3 { font-size: 21px; margin: 2px 0 4px; }
+    .c4-list h3 small { display: block; font: 700 11.5px 'DM Sans', system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+    .c4-list p { color: var(--muted); font-size: 16px; line-height: 1.55; }
+    .c4-tag { text-align: center; margin-top: 40px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(22px, 2.6vw, 28px); color: var(--primary-dark); }
+
     /* Privacy */
     .privacy-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
     .tile { grid-column: span 2; background: var(--surface); border-radius: 20px; padding: 26px; }
@@ -198,6 +210,11 @@
       .card h3 { margin: 0; font-size: 20px; }
       .card p { grid-column: 1 / -1; margin-top: 12px; }
       .tile { padding: 22px; }
+      .circles4 { grid-template-columns: 1fr; gap: 28px; }
+      .circles4 .art { max-width: 340px; }
+      .c4-list li { padding: 16px; gap: 14px; grid-template-columns: 40px 1fr; }
+      .c4-list .dot { width: 40px; height: 40px; border-width: 4px; }
+      .c4-tag { margin-top: 28px; }
       .under-video { margin-top: 18px; }
       .stories { margin-top: 48px; }
       .story-grid { grid-template-columns: 1fr; gap: 18px; }
@@ -220,6 +237,7 @@
       <nav class="links" aria-label="Main">
         <a href="#video">Watch</a>
         <a href="#features">How it works</a>
+        <a href="#circles">Four circles</a>
         <a href="#privacy">Privacy</a>
         <a href="#flyers">Flyers</a>
         <a class="cta" href="#get-the-app">Get the app</a>
@@ -315,6 +333,69 @@
       </div>
     </section>
 
+    <section class="band-white" id="circles">
+      <div class="wrap">
+        <div class="head center">
+          <span class="kicker">The four circles</span>
+          <h2>What every village gives a family</h2>
+          <p>Villakin is built around four promises. Each one is a circle around your family.</p>
+        </div>
+        <div class="circles4">
+          <div class="art"><svg viewBox="0 0 560 560" role="img" aria-labelledby="fc-t" style="width:100%;height:auto;display:block">
+  <title id="fc-t">The four circles of Villakin: Trust, Play, Privacy and Freedom, overlapping around your family</title>
+  <defs>
+    <style>
+      .k { font: 700 13px 'DM Sans', system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+      .t { font: 600 34px 'Fraunces', Georgia, serif; letter-spacing: -.5px; }
+    </style>
+  </defs>
+  <!-- soft dashed outer ring: the village -->
+  <circle cx="280" cy="280" r="266" fill="none" stroke="#CFE0DA" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <!-- the four circles, tinted so the overlaps blend -->
+  <g style="mix-blend-mode: multiply">
+    <circle cx="200" cy="200" r="138" fill="#2F6F62" fill-opacity=".13" stroke="#2F6F62" stroke-width="7"/>
+    <circle cx="360" cy="200" r="138" fill="#E8956F" fill-opacity=".16" stroke="#E8956F" stroke-width="7"/>
+    <circle cx="200" cy="360" r="138" fill="#7FA99C" fill-opacity=".18" stroke="#7FA99C" stroke-width="7"/>
+    <circle cx="360" cy="360" r="138" fill="#D9A441" fill-opacity=".16" stroke="#D9A441" stroke-width="7"/>
+  </g>
+  <!-- little family dots on each ring -->
+  <circle cx="102" cy="102" r="9" fill="#2F6F62" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="458" cy="102" r="9" fill="#E8956F" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="102" cy="458" r="9" fill="#7FA99C" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="458" cy="458" r="9" fill="#D9A441" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="62" cy="200" r="6" fill="#2F6F62" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="498" cy="200" r="6" fill="#E8956F" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="62" cy="360" r="6" fill="#7FA99C" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="498" cy="360" r="6" fill="#D9A441" stroke="#FBF7F1" stroke-width="2.5"/>
+  <!-- names -->
+  <g text-anchor="middle">
+    <text class="k" x="168" y="150" fill="#1F4F45">Circle of</text>
+    <text class="t" x="168" y="186" fill="#1F4F45">Trust</text>
+    <text class="k" x="392" y="150" fill="#7A3314">Circle of</text>
+    <text class="t" x="392" y="186" fill="#7A3314">Play</text>
+    <text class="k" x="168" y="398" fill="#2C5A4F">Circle of</text>
+    <text class="t" x="168" y="434" fill="#2C5A4F">Privacy</text>
+    <text class="k" x="392" y="398" fill="#6E4F10">Circle of</text>
+    <text class="t" x="392" y="434" fill="#6E4F10">Freedom</text>
+  </g>
+  <!-- your family, in the middle -->
+  <circle cx="280" cy="280" r="54" fill="#FBF7F1" stroke="#E7DFD3" stroke-width="2"/>
+  <g transform="translate(252 248) scale(1)">
+    <path d="M4 27.5 L28 6.5 L52 27.5" fill="none" stroke="#2F6F62" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="41.5" r="7.5" fill="#2F6F62"/><circle cx="40" cy="41.5" r="7.5" fill="#2F6F62"/><circle cx="28" cy="45.5" r="5" fill="#E8956F"/>
+  </g>
+</svg></div>
+          <ul class="c4-list">
+            <li style="--c:#2F6F62"><span class="dot" aria-hidden="true"></span><div><h3><small>Circle of</small>Trust</h3><p>Only families you know, or ones you choose to let in. Every circle is invite-only.</p></div></li>
+            <li style="--c:#E8956F"><span class="dot" aria-hidden="true"></span><div><h3><small>Circle of</small>Play</h3><p>Playdates, school holidays and classes together, so kids build real friendships close to home.</p></div></li>
+            <li style="--c:#7FA99C"><span class="dot" aria-hidden="true"></span><div><h3><small>Circle of</small>Privacy</h3><p>First names and suburbs only. Kids stay hidden until you're in. Data kept in Australia, no ads, ever.</p></div></li>
+            <li style="--c:#D9A441"><span class="dot" aria-hidden="true"></span><div><h3><small>Circle of</small>Freedom</h3><p>Teens head out with friends while parents stay in the loop. And parents get a breather, with care swaps and help when it counts.</p></div></li>
+          </ul>
+        </div>
+        <p class="c4-tag">Every village starts with a circle.</p>
+      </div>
+    </section>
+
     <section class="band-soft" id="privacy">
       <div class="wrap">
         <div class="head">
@@ -359,7 +440,7 @@
             <img src="media/flyer-2-page.jpg" alt="Front page of the 2-page Villakin flyer" loading="lazy" />
             <div>
               <h3>2-page handout</h3>
-              <p>The quick version: what Villakin is, how it works in four steps, and how to get in touch.</p>
+              <p>The quick version: what Villakin is, the four circles, how it works in four steps, and a QR code to get the app.</p>
               <a class="pill solid" href="media/Villakin-Flyer-2-page.pdf" download>Download PDF (0.9 MB)</a>
             </div>
           </div>

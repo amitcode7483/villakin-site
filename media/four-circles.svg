@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" role="img" aria-labelledby="fc-t">
+  <title id="fc-t">The four circles of Villakin: Trust, Play, Privacy and Freedom, overlapping around your family</title>
+  <defs>
+    <style>
+      .k { font: 700 13px 'DM Sans', system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+      .t { font: 600 34px 'Fraunces', Georgia, serif; letter-spacing: -.5px; }
+    </style>
+  </defs>
+  <!-- soft dashed outer ring: the village -->
+  <circle cx="280" cy="280" r="266" fill="none" stroke="#CFE0DA" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <!-- the four circles, tinted so the overlaps blend -->
+  <g style="mix-blend-mode: multiply">
+    <circle cx="200" cy="200" r="138" fill="#2F6F62" fill-opacity=".13" stroke="#2F6F62" stroke-width="7"/>
+    <circle cx="360" cy="200" r="138" fill="#E8956F" fill-opacity=".16" stroke="#E8956F" stroke-width="7"/>
+    <circle cx="200" cy="360" r="138" fill="#7FA99C" fill-opacity=".18" stroke="#7FA99C" stroke-width="7"/>
+    <circle cx="360" cy="360" r="138" fill="#D9A441" fill-opacity=".16" stroke="#D9A441" stroke-width="7"/>
+  </g>
+  <!-- little family dots on each ring -->
+  <circle cx="102" cy="102" r="9" fill="#2F6F62" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="458" cy="102" r="9" fill="#E8956F" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="102" cy="458" r="9" fill="#7FA99C" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="458" cy="458" r="9" fill="#D9A441" stroke="#FBF7F1" stroke-width="3"/>
+  <circle cx="62" cy="200" r="6" fill="#2F6F62" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="498" cy="200" r="6" fill="#E8956F" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="62" cy="360" r="6" fill="#7FA99C" stroke="#FBF7F1" stroke-width="2.5"/>
+  <circle cx="498" cy="360" r="6" fill="#D9A441" stroke="#FBF7F1" stroke-width="2.5"/>
+  <!-- names -->
+  <g text-anchor="middle">
+    <text class="k" x="168" y="150" fill="#1F4F45">Circle of</text>
+    <text class="t" x="168" y="186" fill="#1F4F45">Trust</text>
+    <text class="k" x="392" y="150" fill="#7A3314">Circle of</text>
+    <text class="t" x="392" y="186" fill="#7A3314">Play</text>
+    <text class="k" x="168" y="398" fill="#2C5A4F">Circle of</text>
+    <text class="t" x="168" y="434" fill="#2C5A4F">Privacy</text>
+    <text class="k" x="392" y="398" fill="#6E4F10">Circle of</text>
+    <text class="t" x="392" y="434" fill="#6E4F10">Freedom</text>
+  </g>
+  <!-- your family, in the middle -->
+  <circle cx="280" cy="280" r="54" fill="#FBF7F1" stroke="#E7DFD3" stroke-width="2"/>
+  <g transform="translate(252 248) scale(1)">
+    <path d="M4 27.5 L28 6.5 L52 27.5" fill="none" stroke="#2F6F62" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="41.5" r="7.5" fill="#2F6F62"/><circle cx="40" cy="41.5" r="7.5" fill="#2F6F62"/><circle cx="28" cy="45.5" r="5" fill="#E8956F"/>
+  </g>
+</svg>
