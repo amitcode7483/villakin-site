@@ -89,8 +89,7 @@
     /* Stories (short films, one family each) */
     .stories { margin-top: 72px; }
     .stories .head { margin-bottom: 28px; }
-    .story-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 760px; margin: 0 auto; }
-    /* When there are two or more stories, switch to: grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; */
+    .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
     .story { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
     .story video { width: 100%; aspect-ratio: 16 / 9; display: block; background: var(--ink); }
     .story .body { padding: 18px 22px 22px; }
@@ -292,7 +291,7 @@
           <div class="head center">
             <span class="kicker">Stories from the village</span>
             <h2>Every kid deserves a village</h2>
-            <p>Short films about the families Villakin is for. Made in Sydney, inspired by real Saturdays.</p>
+            <p>Short films about the families Villakin is for. Made in Sydney, inspired by real families.</p>
           </div>
           <div class="story-grid">
             <article class="story">
@@ -304,6 +303,17 @@
                 <span class="ep">Story 1 · 49 seconds</span>
                 <h3>Saturday</h3>
                 <p>Ben and his son Max used to have the quietest Saturdays on the street. Then they started a small circle.</p>
+              </div>
+            </article>
+            <article class="story">
+              <video controls playsinline preload="none" poster="media/villakin-story-new-street-poster.jpg" aria-label="New street, a short film">
+                <source src="media/villakin-story-new-street.mp4" type="video/mp4" />
+                Your browser can't play this video. <a href="media/villakin-story-new-street.mp4">Download it instead</a>.
+              </video>
+              <div class="body">
+                <span class="ep">Story 2 · 48 seconds</span>
+                <h3>New street</h3>
+                <p>Nina and her kids had just moved, with school holidays two weeks away and no one to call. Then they found a circle.</p>
               </div>
             </article>
           </div>
