@@ -48,8 +48,8 @@
     .head { max-width: 640px; margin-bottom: 44px; }
     .kicker::before { content: ''; display: inline-block; width: 9px; height: 9px; border: 2px solid currentColor; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
     .kicker { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
-    .head h2 { font-size: clamp(30px, 4vw, 40px); }
-    .head p { color: var(--muted); font-size: 18px; margin-top: 14px; }
+    .head h2 { font-size: clamp(30px, 4vw, 40px); text-wrap: balance; }
+    .head p { color: var(--muted); font-size: 18px; margin-top: 14px; text-wrap: balance; }
     .head.center { margin-left: auto; margin-right: auto; text-align: center; }
 
     /* Hero */
@@ -89,7 +89,7 @@
     /* Stories (short films, one family each) */
     .stories { margin-top: 72px; }
     .stories .head { margin-bottom: 28px; }
-    .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; }
     .story { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
     .story video { width: 100%; aspect-ratio: 16 / 9; display: block; background: var(--ink); }
     .story .body { padding: 18px 22px 22px; }
