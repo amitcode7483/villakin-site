@@ -6,7 +6,13 @@
   <title>Get Villakin</title>
   <meta name="robots" content="noindex" />
   <!-- Short address for flyers and QR codes: villakin.com.au/app -->
-  <meta http-equiv="refresh" content="0; url=/#get-the-app" />
+  <script>
+    // Flyer QR codes land here: phones go straight to their store, everyone else to the website.
+    var ua = navigator.userAgent;
+    var to = /iPhone|iPad|iPod/.test(ua) ? 'https://apps.apple.com/au/app/villakin/id6820375423' : /Android/.test(ua) ? 'https://play.google.com/store/apps/details?id=au.com.villakin.app' : '/#get-the-app';
+    location.replace(to);
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=/#get-the-app" /></noscript>
   <link rel="canonical" href="https://villakin.com.au/#get-the-app" />
   <style>body{font-family:system-ui,sans-serif;background:#fbf7f1;color:#1f2a2e;padding:40px 16px;text-align:center}a{color:#2f6f62}</style>
 </head>
