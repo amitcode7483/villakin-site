@@ -140,6 +140,14 @@
 
     /* Features */
     .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .partner { margin-top: 28px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; background: #FFF8E6; border: 1px solid #F1DFA8; border-radius: 20px; padding: 22px 26px; }
+    .partner .bee { width: 64px; height: 64px; flex: 0 0 64px; border-radius: 50%; background: #FBE7A6; display: grid; place-items: center; font-size: 32px; }
+    .partner .txt { flex: 1 1 260px; min-width: 0; }
+    .partner .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--primary-dark); margin-bottom: 4px; }
+    .partner h3 { margin: 0 0 4px; font-size: 20px; }
+    .partner p { margin: 0; color: var(--muted); font-size: 15.5px; }
+    .partner a.go { flex: 0 0 auto; background: #F4C24D; color: var(--ink); font-weight: 700; text-decoration: none; border-radius: 12px; padding: 11px 18px; }
+    .partner a.go:hover { background: #EDB42F; }
     section.features-band { background: linear-gradient(180deg, var(--ground) 0%, var(--warm-soft) 160%); }
     .card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; box-shadow: 0 14px 30px -24px rgba(31,79,69,.45); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
     .card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--primary); }
@@ -400,6 +408,15 @@
           <div class="card"><div class="num">4</div><h3>Classes and programs</h3><p>Find holiday programs and term classes, and go together with a friend from your circle.</p></div>
           <div class="card"><div class="num">5</div><h3>Teens, with both parents in the loop</h3><p>Teens plan activities and trips; either parent approves. Add your partner with a code so you both get requests, alerts and SOS. Live location only during a trip.</p></div>
           <div class="card"><div class="num">6</div><h3>Every kid belongs</h3><p>Sensory-friendly, small group and step-free options, and private "what helps" notes in your own words.</p></div>
+        </div>
+        <div class="partner">
+          <div class="bee" aria-hidden="true">🐝</div>
+          <div class="txt">
+            <span class="tag">Featured class partner</span>
+            <h3>Thinkibee: little thinkers, big confidence</h3>
+            <p>Guided maths practice for curious kids, with NAPLAN, OC and Selective preparation.</p>
+          </div>
+          <a class="go" href="https://www.thinkibee.com.au/" target="_blank" rel="noopener">Visit Thinkibee →</a>
         </div>
       </div>
     </section>
